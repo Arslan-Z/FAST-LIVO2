@@ -11,21 +11,21 @@ extrin_calib:
   extrinsic_R: [1, 0, 0, 0, 1, 0, 0, 0, 1]
   Rcl:
     [
-      0.0116475,
-      -0.999706,
-      -0.0212429,
-      -0.0246028,
-      0.0209514,
-      -0.999478,
-      0.999629,
-      0.012164,
-      -0.0243515,
+      0.026239,
+      -0.999422,
+      -0.021614,
+      -0.005013,
+      0.021490,
+      -0.999757,
+      0.999643,
+      0.026341,
+      -0.004446,
     ]
-  Pcl: [-0.0354063, -0.00596944, 0.00862045]
+  Pcl: [-0.080684, -0.062251, -0.022930]
 
 time_offset:
   imu_time_offset: 0.0
-  img_time_offset: 0.04
+  img_time_offset: 0.1
   exposure_time_init: 0.0
 
 preprocess:
@@ -36,7 +36,7 @@ preprocess:
   blind: 0.5
 
 vio:
-  max_iterations: 5
+  max_iterations: 6
   outlier_threshold: 1000 # 78 100 156 #100 200 500 700 infinite
   img_point_cov: 100 # 100 1000
   patch_size: 8
@@ -56,7 +56,7 @@ imu:
   b_gyr_cov: 0.001 # 0.1
 
 lio:
-  max_iterations: 5
+  max_iterations: 6
   dept_err: 0.02
   beam_err: 0.15
   min_eigen_value: 0.005 # 0.005
